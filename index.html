@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissors Game</title>
+    <link rel="icon" type="image/jpeg" href="./images/paper-rock-scrissors-logo.jpeg">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>Paper Rock Scissors Game</h1>
+            <section class="result-section">
+                <h3>Player <span class="player-name"></span>: <span class="player">0</span></h3>
+                <h3>Computer: <span class="computer">0</span></h3>
+            </section>
+
+        </header>
+
+
+        <main>
+            <section>
+                <div class="option" data-option="rock">
+                    <h3>Rock</h3>
+                </div>
+                <div class="option" data-option="paper">
+                    <h3>Paper</h3>
+                </div>
+                <div class="option" data-option="scissors">
+                    <h3>Scissors</h3>
+                </div>
+            </section>
+            <button class="play">Play</button>
+        </main>
+    </div>
+
+    <div class="pop-up">
+        <section class="pop-up-body">
+            <h2 class="greeting">Welcome to Rock Paper Scissors Game</h2>
+            <input type="text" placeholder="Your name">
+            <button class="start-game">Start game</button>
+        </section>
+    </div>
+
+
+    <script src="main.js" type="module"></script>
+</body>
+
+</html>

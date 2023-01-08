@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', arial, sans-serif;
+}
+
+button {
+    display: block;
+    transform: scale(1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #bedbf3;
+    border: none;
+    transition-duration: .3s;
+    cursor: pointer;
+}
+
+/* POP UP STARTS */
+
+.pop-up {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition-duration: .3s;
+}
+
+.pop-up .pop-up-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2%;
+    background-color: rgb(245, 245, 245);
+    color: rgb(27, 27, 27);
+    box-shadow: 0 0 10px rgb(59, 59, 59);
+    transform: translate(-50%, -50%);
+}
+
+.pop-up .pop-up-body>* {
+    align-self: center;
+}
+
+.pop-up .pop-up-body .greeting {
+    font-size: 34px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.pop-up .pop-up-body input {
+    width: 60%;
+    padding: 2%;
+    text-align: center;
+    font-size: 28px;
+    transition-duration: .3s;
+}
+
+.pop-up .pop-up-body input::placeholder {
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.pop-up .pop-up-body input:focus {
+    outline-color: #64b3f4;
+}
+
+.pop-up .pop-up-body .start-game {
+    padding: 1% 2%;
+    font-size: 26px;
+}
+
+.pop-up .pop-up-body .start-game:hover {
+    background-color: #9dcaf0;
+}
+
+@media(max-width: 1280px) {
+    .pop-up .pop-up-body {
+        width: 50%;
+        height: 45%;
+    }
+
+    .pop-up .pop-up-body input {
+        width: 80%;
+    }
+}
+
+@media(max-width: 1024px) {
+    .pop-up .pop-up-body {
+        width: 60%;
+    }
+}
+
+@media(max-width: 768px) {
+    .pop-up .pop-up-body {
+        width: 80%;
+        padding: 3%;
+    }
+
+    .pop-up .pop-up-body .greeting {
+        font-size: 32px;
+    }
+
+    .pop-up .pop-up-body input {
+        width: 90%;
+        padding: 1.5%;
+        font-size: 26px;
+    }
+}
+
+/* POP UP END */
+
+#wrapper header {
+    width: 100%;
+    padding: 3% 0;
+    margin-bottom: 5%;
+    text-align: center;
+    color: rgb(245, 245, 245);
+    text-shadow: 0 0 5px rgb(50, 50, 50);
+    background: linear-gradient(to bottom right, #c2e59c, #64b3f4);
+    border-bottom: 1px solid #ddd;
+}
+
+#wrapper header h1 {
+    font-size: 40px;
+    margin-bottom: 3%;
+}
+
+#wrapper .result-section h3 {
+    font-size: 30px;
+    font-weight: normal;
+}
+
+#wrapper h3 span {
+    font-weight: bold;
+}
+
+#wrapper h3 .player-name {
+    font-weight: normal;
+}
+
+#wrapper main {
+    width: 60%;
+    margin: 0 auto;
+}
+
+#wrapper main section {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+#wrapper .option {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1%;
+    width: 300px;
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid #ddd;
+    transition-duration: .3s;
+    cursor: pointer;
+}
+
+#wrapper .option:first-of-type {
+    background-image: url(./images/rock.png);
+}
+
+#wrapper .option:nth-of-type(2) {
+    background-image: url(./images/paper.png);
+}
+
+#wrapper .option:last-of-type {
+    background-image: url(./images/scissors.png);
+}
+
+#wrapper .option:hover {
+    transform: rotate(-3deg);
+    background-color: #eaf0f5;
+}
+
+#wrapper .option .img-container {
+    height: 80%;
+    text-align: center;
+}
+
+#wrapper .option h3 {
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#wrapper .option .img-container img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#wrapper main .play {
+    margin: 5% auto;
+    padding: 2% 5%;
+    font-size: 30px;
+}
+
+#wrapper main .play:hover {
+    background-color: #9dcaf0;
+    transform: scale(1.03);
+}
+
+#wrapper .option.active {
+    box-shadow: 0 0 10px #64b3f4;
+}
+
+@media (max-width: 1640px) {
+    #wrapper main {
+        width: 65%;
+    }
+}
+
+@media (max-width: 1440px) {
+    #wrapper main {
+        width: 75%;
+    }
+}
+
+@media (max-width: 1280px) {
+    #wrapper main {
+        width: 90%;
+    }
+
+    #wrapper main .play {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 1024px) {
+    #wrapper .option {
+        width: 270px;
+        height: 270px;
+    }
+}
+
+@media (max-width: 928px) {
+    #wrapper .option {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 828px) {
+    #wrapper .option {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media(max-width: 768px) {
+
+    #wrapper header h1 {
+        font-size: 36px;
+    }
+
+    #wrapper .result-section h3 {
+        font-size: 28px;
+    }
+
+    #wrapper main {
+        width: 95%;
+    }
+
+    #wrapper .option {
+        width: 175px;
+        height: 175px;
+    }
+
+    #wrapper .option h3 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 624px) {
+    #wrapper .option {
+        width: 145px;
+        height: 145px;
+    }
+}
